@@ -214,6 +214,13 @@ ul.breadcrumb {
     background-color: rgb(0, 0, 0);
     background-color: rgb(0 0 0 / 52%);
     }
+    .modal-contact-content {
+        background-color: #f1f1f1;
+        margin: auto;
+        padding: 20px;
+        border: 1px solid #fff;
+        width: 100%;
+    }
 }
 @media only screen and (min-width: 768px) {
     .modal-contact {
@@ -231,12 +238,26 @@ ul.breadcrumb {
     background-color: rgb(0, 0, 0);
     background-color: rgb(0 0 0 / 52%);
     }
+    .modal-contact-content {
+        background-color: #f1f1f1;
+        margin: auto;
+        padding: 20px;
+        border: 1px solid #fff;
+        width: 80%;
+    }
 }
-
-.modal-contact-content {
-    background-color: #fefefe;
-    margin: auto;
-    padding: 20px;
-    border: 1px solid #fff;
-    width: 90%;
+.btn-form-contact {
+    font-size: 12px;
+    padding: 10px 20px;
+    border: 1px solid black;
+}
+.btn-form-contact:hover{
+    background-color: #2e2e2e;
+    border: 1px solid #2e2e2e;
+    color: #fff;
+    cursor: pointer;
+}
+#basket-nav {
+    border-left: 2px solid #000;
+    border-right: 2px solid #000;
 }

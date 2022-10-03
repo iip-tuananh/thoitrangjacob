@@ -73,27 +73,34 @@
                               @csrf
                               <div class="form-signup clearfix">
                                  <div class="row group_contact">
-                                    <fieldset class="medium-6 small-6 column">
+                                    <fieldset class="medium-6 small-12 column">
                                        <input placeholder="Tên của bạn" type="text" class="form-control  form-control-lg" required value="" name="name">
                                     </fieldset>
-                                    <fieldset class="medium-6 small-6 column">
+                                    <fieldset class="medium-6 small-12 column">
                                        <input placeholder="Số điện thoại" type="text" class="form-control form-control-lg" id="Phone" value="" name="phone">
                                     </fieldset>
-                                    <fieldset class="medium-6 small-6 column">
+                                    <fieldset class="medium-6 small-12 column">
                                        <input placeholder="Email" type="email" required id="email1" class="form-control form-control-lg" value="" name="email">
                                     </fieldset>
-                                    <fieldset class="medium-6 small-6 column">
+                                    <fieldset class="medium-6 small-12 column">
                                        <input placeholder="Địa chỉ" type="text" class="form-control form-control-lg" id="Address" value="" name="address">
                                     </fieldset>
                                     <fieldset class="medium-12 small-12 column">
                                        <textarea placeholder="Nội dung" name="mess" id="comment" class="form-control content-area form-control-lg" rows="2" Required></textarea>
                                     </fieldset>
-                                    <fieldset class="medium-12 small-12 column">
-                                       <button type="submit" class="btn ">Gửi ngay </button>
+                                    <fieldset class="medium-12 small-12 column text-center">
+                                       <button type="submit" class="btn btn-form-contact">Gửi ngay </button>
+                                       <a class="btn btn-form-contact close-contact">Đóng </a>
                                     </fieldset>
                                  </div>
                               </div>
                            </form>
+                        </div>
+                        <div class="text-center mt-4">
+                           <h5>Hoặc liên hệ với chúng tôi</h5>
+                           <p>Hotline: <a href="tel:{{$setting->phone1}}">{{$setting->phone1}}</a></p>
+                           <p>Email: <a href="mailto:{{$setting->email}}">{{$setting->email}}</a></p>
+                           <p>Facebook: <a href="{{$setting->facebook}}">{{$setting->facebook}}</a></p>
                         </div>
                         </div>
                   </div>
@@ -108,12 +115,20 @@
                <script async defer crossorigin="anonymous" src="https://connect.facebook.net/vi_VN/sdk.js#xfbml=1&version=v15.0" nonce="wOiI540C"></script>
                @yield('js')
                <script>
+                  $('.add-to-cart').click(function() {
+                     
+                  })
+               </script>
+               <script>
                   $(document).ready(function () {
                      var modal = $('.modal-contact');
                      var btn = $('.form-contact');
             
-                     $('.form-contact').click(function windowShow() {
+                     $('.form-contact').click(function () {
                         modal.show();
+                     });
+                     $('.close-contact').click(function () {
+                        modal.hide();
                      });
                      $(window).on('click', function (e) {
                         if ($(e.target).is('.modal-contact')) {

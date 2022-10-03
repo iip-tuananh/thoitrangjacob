@@ -18,6 +18,7 @@ use App\models\website\Prize;
 use App\models\website\Founder;
 use App\models\website\Partner;
 use App\models\PageContent;
+use App\models\product\ProductBrands;
 use Illuminate\Support\Facades\Redirect;
 
 class PageController extends Controller
@@ -125,6 +126,7 @@ class PageController extends Controller
         $data['keyword'] = $request->keyword;
         $data['countproduct'] = count($arr);
         $data['resultPro'] = $arr;
+        $data['brands'] = ProductBrands::where('status', 1)->get();
         return view('search_result',$data);
     }
     public function postcontact(Request $request){

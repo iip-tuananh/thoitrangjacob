@@ -129,6 +129,7 @@ $priceDiscount = $product->price - $product->price * ($product->discount / 100);
       padding: 10px 0;
       font-size: 20px !important;
       font-weight: 700;
+      cursor: pointer;
    }
    .add-cart {
       margin-top: 20px;

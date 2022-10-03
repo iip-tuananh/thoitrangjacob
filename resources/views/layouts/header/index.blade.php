@@ -30,22 +30,12 @@
                </a>
          </div>
          <div class="header-flex-item show-on-fixed search-flex-group">
-               <form method="POST" action="{{route('search_result')}}" id="mobileSearchBarForm">
+               <form method="POST" action="{{route('search_result')}}">
                   @csrf
                   <span class="header-icon icon icon-search"></span>
-                  <input type="text" id="mobileSearchBarSearchBox" aria-label="Tìm kiếm" placeholder="Tìm kiếm sản phẩm ..." autocomplete="off" name="keyword"/>
-                  <span class="is-relative mobile-navigation-search-button rfk-no-border show-on-active"><span class="icon icon-small icon-circled icon-chevron-right"></span><input name="search" disabled="disabled" id="searchBarSearchButton" type="submit" value="" aria-label="Search Button"/><input name="_D:search" type="hidden" value=" "/></span>
+                  <input type="search" aria-label="Tìm kiếm" placeholder="Tìm kiếm sản phẩm ..." autocomplete="off" name="keyword"/>
                </form>
          </div>
-         {{-- <div class="header-flex-item is-relative hide-on-fixed">
-               <a id="mobileHeaderAccount" href="javascript:void(0)" aria-label="Account Menu"
-               ><span
-               class="header-icon icon icon-large icon-jd-account has-corner-badge"
-               ></span
-               ></a
-               >
-               <div class="diamond"></div>
-         </div> --}}
          <div class="header-flex-item hide-on-active">
                <a
                href="javascript:void(0)"
@@ -72,46 +62,46 @@
    </div>
    <div class="column header-navigation hide-for-small-only medium-8 large-7">
       <ul class="no-bullet">
-         <li class="fill-width search-form-container">
-               <form action="{{route('search_result')}}" method="POST" id="searchBarForm" class="searchBarForm">
+         <form action="{{route('search_result')}}" method="POST" class="searchBarForm">
+            <li class="fill-width search-form-container">
+                  @csrf
                <ul>
-                  <li class="fill-width"><input type="text" id="searchBarSearchBox" title="Tìm kiếm" aria-label="Tìm kiếm" placeholder="Tìm kiếm sản phẩm ..." autocomplete="off" name="keyword"/></li>
+                  <li class="fill-width"><input type="text" title="Tìm kiếm" aria-label="Tìm kiếm" placeholder="Tìm kiếm sản phẩm ..." autocomplete="off" name="keyword"/></li>
                </ul>
-               <div style="display:none"><input name="_DARGS" type="hidden" value=""/> </div>
-               </form>
-         </li>
+            </li>
+            <li class="button hover-effect" ><button type="submit" style="font-size: 13px">Tìm</button></li>
+         </form>
          <li class="is-relative">
-               <ul class="no-bullet">
-               <li class="button hover-effect" id="jd-search-btn"><span style="font-size: 13px">Tìm</span></li>
+               <div class="no-bullet">
                <li id="basket-nav" class="has-corner-badge js-dynamic-cart hover-effect">
                   <a href="javascript:void(0)" class="button small hollow black nav-last hide-for-small-only js-cart-link" data-status-loaded="false">
                   <span class="icon icon-jd-checkout"></span>
                   <span class="navigation-label">GIỎ HÀNG</span>
-                  <span class="badge corner-badge js-count" style="display: none;"></span>
+                  <span class="badge corner-badge js-count" >1</span>
                   </a>
                   <div id="dynamicCartWrapper">
                   </div>
                </li>
-               <li class="button hover-effect form-contact" id="jd-search-btn"><span style="font-size: 13px">Tư vấn</span></li>
-               </ul>
+               <li class="button hover-effect form-contact"><span style="font-size: 13px">Tư vấn</span></li>
+               </div>
          </li>
       </ul>
-      <div class="autosuggest-box rfk-box">
+      {{-- <div class="autosuggest-box rfk-box">
          <div class="row">
                <div class="column small-5 br-medium-gray autosuggest-list">
                <ul></ul>
                </div>
                <div class="column small-7 pl-5 autosuggest-products"></div>
          </div>
-      </div>
+      </div> --}}
    </div>
    </div>
-   <div class="rfk-results">
+   {{-- <div class="rfk-results">
    <div class="autosuggest-list">
       <ul></ul>
    </div>
    <div class="mobile autosuggest-products"></div>
-   </div>
+   </div> --}}
 </div>
 {{-- <div id="mobileAccountWrapper" class="column header-mobile-account small-12 show-for-small-only is-relative">
    <div class="mobile-account-links">

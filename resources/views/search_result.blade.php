@@ -11,97 +11,68 @@ Kết quả tìm kiếm
 @section('css')
 @endsection
 @section('content')
-<div class="breadcrumb-area">
-	<div class="container">
-		<div class="row">
-			<div class="col-md-12">
-				<div class="breadcrumb-content">
-					<ul class="nav">
-						<li><a href="{{route('home')}}">Trang chủ</a></li>
-						<li>Kết quả tìm kiếm</li>
-					</ul>
+<section class="bread-crumb">
+	<div class="container row">
+	<ul class="breadcrumb" itemscope itemtype="https://schema.org/BreadcrumbList">
+		<li class="home" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+			<a itemprop="item" href="{{route('home')}}" title="Trang chủ" style="margin-right: 6px;">
+				<span itemprop="name">Trang chủ</span>
+				<meta itemprop="position" content="1" />
+			</a>
+			<i class="fa-solid fa-caret-right"></i>
+		</li>
+		<li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem" style="margin-left: 6px;">
+			<strong>
+				<span itemprop="name">Đã tìm thấy {{$countproduct}} kết quả phù hợp</span>
+				<meta itemprop="position" content="2" />
+			</strong>
+		</li>
+	</ul>
+	</div>
+</section>
+<div class="container ant-cate-content">
+	<div class="row">
+	<div class="medium-2 left-nav">
+		<div class="list-brand">
+			<p><strong>Thương hiệu</strong></p>
+			<div class="brand">
+				@foreach ($brands as $brand)
+				<div class="medium-4">
+					<div class="box-image-brand">
+						<img src="{{$brand->image}}" alt="{{$brand->name}}" loading="lazy">
+					</div>
 				</div>
+				@endforeach
 			</div>
 		</div>
+		<div class="list-price">
+			<p><strong>Giá</strong></p>
+			<div class="form-group">
+				<input type="radio" name="price" id="1" value=""><label for="1">10000</label>
+			</div>
+			<div class="form-group">
+				<input type="radio" name="price" id="2" value=""><label for="2">10000</label>
+			</div>
+			<div class="form-group">
+				<input type="radio" name="price" id="3" value=""><label for="3">10000</label>
+			</div>
+			<div class="form-group">
+				<input type="radio" name="price" id="4" value=""><label for="4">10000</label>
+			</div>
+		</div>
+		<button class="btn-filter">Lọc</button>
 	</div>
- </div>
- <div class="shop-category-area mt-30px">
-	<div class="container">
-	   <div class="row">
-		  <div class="col-lg-12 col-md-12">
-			 <!-- Shop Top Area Start -->
-			 {{-- <div class="shop-top-bar d-flex"> --}}
-				@if (count($resultPro)>0)
-				<h3>Tìm thấy <strong>{{$countproduct}}</strong> kết quả với từ khóa <strong>"{{$keyword}}"</h3>
-				@else
-				<h3>Không tìm thấy kết quả với từ khóa <strong>"{{$keyword}}"</h3>
-				@endif
-			 {{-- </div> --}}
-			 <!-- Shop Top Area End -->
-			 <!-- Shop Bottom Area Start -->
-			 <div class="shop-bottom-area mt-35">
-				<!-- Shop Tab Content Start -->
-				<div class="tab-content jump">
-				   <!-- Tab One Start -->
-				   <div id="shop-1" class="tab-pane active">
-					  <div class="row responsive-md-class">
-						@foreach ($resultPro as $pro)
-						@php
-						$img = json_decode($pro['images']);
-						@endphp
-						 <div class="col-xl-3 col-md-4 col-sm-6">
-							<article class="list-product">
-								<div class="img-block">
-								   <a href="{{route('detailProduct',['cate'=>$pro['cate_slug'],'type'=>$pro['type_slug'] ? $pro['type_slug'] : 'loai','id'=>$pro['slug']])}}" class="thumbnail">
-								   <img class="first-img" src="{{$img[0]}}" alt="" />
-								   <img class="second-img" src="{{$img[1]}}" alt="" />
-								   </a>
-								</div>
-								@if ($pro['discount'] > 0)
-								<ul class="product-flag">
-								   <li class="new">-{{$pro['discount']}}%</li>
-								</ul>
-								@endif
-								<div class="product-decs">
-								   <a class="inner-link" href="{{route('detailProduct',['cate'=>$pro['cate_slug'],'type'=>$pro['type_slug'] ? $pro['type_slug'] : 'loai','id'=>$pro['slug']])}}"><span>{{languageName($pro['name'])}}</span></a>
-								   <div class="pricing-meta">
-									  @if ($pro['price'] > 0)
-										 <ul>
-											@if ($pro['discount'] > 0)
-											<li class="old-price">{{number_format($pro['price'])}}đ</li>
-											<li class="current-price">{{number_format($pro['price']-($pro['price']*($pro['discount']/100)))}}đ</li>
-											@else
-											<li class="current-price">{{number_format($pro['price'])}}đ</li>
-											@endif
-										 </ul>
-									  @else 
-										  <ul>
-											<li class="current-price">Liên hệ</li>
-										 </ul>
-										 @endif
-										 {!!languageName($pro['description'])!!}
-								  </div>
-								</div>
-								<div class="add-to-link">
-								   <ul>
-									  <li class="cart">
-										 <input type="hidden"  id="inputqty" value="1">
-										 <a class="cart-btn" href="javascript:;" onclick="addToCart({{$pro['id']}},1)">Thêm giỏ hàng</a
-											></li>
-								   </ul>
-								</div>
-							 </article>
-						 </div>
-						 @endforeach
-					  </div>
-				   </div>
-				   
-				   <!-- Tab One End -->
-				</div>>
-			 </div>
-			 <!-- Shop Bottom Area End -->
-		  </div>
-	   </div>
+	<div class="medium-10">
+		<div class="list-product">
+			@foreach ($resultPro as $product)
+			<div class="medium-3">
+				<div class="item">
+				@include('layouts.product.item', ['product'=>$product])
+				</div>
+			</div>
+			@endforeach
+		</div>
 	</div>
- </div>
+	</div>
+</div>
 @endsection
