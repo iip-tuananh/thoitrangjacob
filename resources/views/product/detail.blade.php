@@ -315,7 +315,7 @@ $priceDiscount = $product->price - $product->price * ($product->discount / 100);
                <div thumbsSlider="" class="swiper mySwiper3">
                   <div class="swiper-wrapper">
                      @foreach ($imgColor as $key=>$color)
-                        <div class="swiper-slide" data-title="{{$key}}">
+                        <div class="swiper-slide" data-title="{{$key}}" data-color="{{$color->title}}">
                            <img src="{{$color->image}}" loading="lazy" />
                         </div>
                      @endforeach
@@ -330,7 +330,7 @@ $priceDiscount = $product->price - $product->price * ($product->discount / 100);
             <div class="list-size">
                @foreach (json_decode($product->preserve) as $key=>$size)
                   <div class="medium-2">
-                     <div class="box-size" data-size="{{$key}}">
+                     <div class="box-size" data-size="{{$key}}" data-title="{{$size->detail}}">
                         <span>{{$size->detail}}</span>
                      </div>
                   </div>
@@ -338,7 +338,7 @@ $priceDiscount = $product->price - $product->price * ($product->discount / 100);
             </div>
          </div>
          <div class="add-cart">
-            <button class="add-to-cart">Thêm vào giỏ hàng</button>
+            <button class="add-to-cart" data-id="{{$product->id}}" data-url="{{route('addToCart')}}">Thêm vào giỏ hàng</button>
          </div>
          <div class="row align-middle pl-2 mt-1">
             <style>

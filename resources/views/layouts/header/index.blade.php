@@ -43,14 +43,13 @@
                aria-label="Bag"
                data-status-loaded="false"
                >
-               <span
-               class="header-icon icon icon-large icon-jd-checkout has-corner-badge"
-               >
-               <span
-               class="badge corner-badge small-badge js-count"
-               style="display: none"
-               ></span> </span
-               >
+               <span class="header-icon icon icon-large icon-jd-checkout has-corner-badge" >
+                  @if (count($cartcontent) > 0)
+                     <span class="count-cart">{{count($cartcontent)}}</span>
+                  @else
+                     <span class="count-cart" style="display:none;"></span>
+                  @endif
+               </span>
                </a>
          </div>
          <div class="header-flex-item show-on-active">
@@ -74,10 +73,14 @@
          <li class="is-relative">
                <div class="no-bullet">
                <li id="basket-nav" class="has-corner-badge js-dynamic-cart hover-effect">
-                  <a href="javascript:void(0)" class="button small hollow black nav-last hide-for-small-only js-cart-link" data-status-loaded="false">
+                  <a href="{{route('listCart')}}" class="button small hollow black nav-last hide-for-small-only js-cart-link" data-status-loaded="false">
                   <span class="icon icon-jd-checkout"></span>
                   <span class="navigation-label">GIỎ HÀNG</span>
-                  <span class="badge corner-badge js-count" >1</span>
+                  @if (count($cartcontent) > 0)
+                     <span class="count-cart">{{count($cartcontent)}}</span>
+                  @else
+                     <span class="count-cart" style="display:none;"></span>
+                  @endif
                   </a>
                   <div id="dynamicCartWrapper">
                   </div>
@@ -86,27 +89,9 @@
                </div>
          </li>
       </ul>
-      {{-- <div class="autosuggest-box rfk-box">
-         <div class="row">
-               <div class="column small-5 br-medium-gray autosuggest-list">
-               <ul></ul>
-               </div>
-               <div class="column small-7 pl-5 autosuggest-products"></div>
-         </div>
-      </div> --}}
    </div>
    </div>
-   {{-- <div class="rfk-results">
-   <div class="autosuggest-list">
-      <ul></ul>
-   </div>
-   <div class="mobile autosuggest-products"></div>
-   </div> --}}
 </div>
-{{-- <div id="mobileAccountWrapper" class="column header-mobile-account small-12 show-for-small-only is-relative">
-   <div class="mobile-account-links">
-   </div>
-</div> --}}
 <nav id="headerMainMenu" class="hide-for-small-only">
    <!-- Final Megamenu Path - /NewMegaMenu -->
    <!-- cacheMegaMenu -->

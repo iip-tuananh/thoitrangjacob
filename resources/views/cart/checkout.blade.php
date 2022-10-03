@@ -6,7 +6,7 @@
 	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no">
 	<meta name="description" content="KoKo Pet - Thanh toán đơn hàng" />
-	<title>Tân Sơn Foods - Thanh toán đơn hàng</title>
+	<title>Becks Jacob - Thanh toán đơn hàng</title>
 	<link rel="icon" href="{{url(''.$setting->favicon)}}" type="image/x-icon">
 	<link rel="stylesheet" href="{{ asset('frontend/css/checkout.vendor.min.js') }}">
 	<link rel="stylesheet" href="{{ asset('frontend/css/checkout.min.css') }}">
@@ -54,7 +54,7 @@
 						<div class="logo logo--left ">
 							<h1 class="shop__name">
 								<a href="{{ route('home') }}">
-									Nước giặt Nam Dương
+									Becks Jacob
 								</a>
 							</h1>
 						</div>
@@ -67,7 +67,7 @@
 										<div class="layout-flex">
 											<h2 class="section__title layout-flex__item layout-flex__item--stretch">
 												<i class="fa fa-id-card-o fa-lg section__title--icon hide-on-desktop"></i>
-												   	Thông tin nhận hàng
+												Thông tin nhận hàng
 											</h2>
 										</div>
 									</div>

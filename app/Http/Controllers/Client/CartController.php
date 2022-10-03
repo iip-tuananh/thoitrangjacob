@@ -46,6 +46,8 @@ class CartController extends Controller
                     $billdetail->qty = $item['quantity'];
                     $billdetail->images = $item['image'];
                     $billdetail->discount = $item['discount'];
+                    $billdetail->color = $item['color'];
+                    $billdetail->size = $item['size'];
                     $billdetail->save();
                 }
 				DB::commit();
@@ -65,7 +67,6 @@ class CartController extends Controller
     }
     public function addToCart(Request $request)
     {
-        
         $id = $request->id;
         $product = Product::findOrFail($id);
         $cart = session()->get('cart',[]);
@@ -84,12 +85,15 @@ class CartController extends Controller
                     "type_slug" => $product->type_slug,
                     "slug"=>$product->slug,
                     "image" => json_decode($product->images)[0],
+                    "color" =>$request->color,
+                    "size" => $request->size
                 ];
             }
         } else {
             if(isset($cart[$id])) {
                 $cart[$id]['quantity'] = $cart[$id]['quantity'] + 1;
                 $cart[$id]['color'] = $request->color;
+                $cart[$id]['size'] = $request->size;
             } else {
                 $cart[$id] = [
                     "id" => $product->id,
@@ -101,6 +105,8 @@ class CartController extends Controller
                     "type_slug" => $product->type_slug,
                     "slug"=>$product->slug,
                     "image" => json_decode($product->images)[0],
+                    "color" =>$request->color,
+                    "size" => $request->size
                 ];
             }
         }

@@ -111,12 +111,31 @@
                <script src="{{asset('frontend/js/9d597865277adae94b63cb4d7760ada0.vendor.min.js')}}"></script>
                <script src="{{asset('frontend/js/5345593c953b268a34c5fe579d368717.app.min.js')}}"></script>
                <script src="{{asset('frontend/js/owl.carousel.min.js')}}"></script>
+               <script src="{{asset('frontend/js/notify.min.js')}}"></script>
                <div id="fb-root"></div>
                <script async defer crossorigin="anonymous" src="https://connect.facebook.net/vi_VN/sdk.js#xfbml=1&version=v15.0" nonce="wOiI540C"></script>
                @yield('js')
                <script>
                   $('.add-to-cart').click(function() {
-                     
+                     var id = $(this).data('id');
+                     var url = $(this).data('url');
+                     var color = $('.mySwiper3 .swiper-slide.selected').data('color');
+                     var size = $('.list-size .box-size.selected').data('title');
+                     $.ajax({
+                        type: 'POST',
+                        url: url,
+                        headers: {'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')},
+                        data: {id:id, color:color, size:size},
+                        success: function(data) {
+                           $.notify("Thêm vào giỏ hàng thành công!", "success");
+                           let countCart = Object.keys(data).length;
+                           $('#basket-nav .count-cart').attr('display', 'block');
+                           $('#basket-nav .count-cart').append(countCart);
+                        },
+                        error: function(data) {
+                           $.notify("Thêm vào giỏ hàng thất bại!", "error");
+                        }
+                     })
                   })
                </script>
                <script>
