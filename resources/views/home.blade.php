@@ -404,9 +404,9 @@
    <div style="height:20px" class="show-for-medium-only"></div>
    <div style="height:20px" class="show-for-small-only"></div>
    <style type="text/css">#hpSeoCopy .seo-header {
-      font-family: "Gotham Bold", "Gotham Book", sans-serif;
+      font-family: 'Faustina', serif;
       font-size: 28px;
-      font-weight: normal;
+      font-weight: 600;
       line-height: 1;
       text-transform: uppercase;
       letter-spacing: 0px;
