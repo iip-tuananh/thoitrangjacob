@@ -6,7 +6,6 @@
                <div class="row align-top">
                      <div class="column align-self-top mt-3" tabindex="0">
                      <p class="h3" >Form nhận tư vấn</p>
-                     <div class="tile-description" tabindex="0">Sign up for the latest<br> JD Sports news, deals, updates,</br> and special offers.</div>
                      <form class="footerEmailSignupForm" id="footerEmailSignupDesktop" action="{{route('postcontact')}}" method="POST">
                         @csrf
                         <div class="input-group">
@@ -28,7 +27,6 @@
                <div class="row align-top">
                      <div class="column align-self-top mt-3" tabindex="0">
                      <p class="h3" >Tuyển sỉ</p>
-                     <div class="tile-description" tabindex="0">Find your local store, <br>view hours, and get directions.</div>
                      <a class="button mb-2" href="tel:{{$setting->phone1}}">Liên hệ ngay</a>
                      <hr class="mt-4 show-for-small-only mobile-hline" />
                      </div>
@@ -63,8 +61,7 @@
                            <p class="h3" tabindex="0">Hỗ trợ set up cửa hàng</p>
                         </div>
                      </div>
-                     <div class="tile-description" tabindex="0">Be the first to cop early on launches, gain<br> access to exclusive experiences & offers, early<br> access to deals, and other special surprises.</div>
-                     <a class="button mb-2" href="tel:{{$setting->phone1}}">Gọi ngay</a>
+                      <a class="button mb-2" href="tel:{{$setting->phone1}}">Gọi ngay</a>
                      <hr class="mt-4 show-for-small-only mobile-hline" />
                      </div>
                </div>

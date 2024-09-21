@@ -39,6 +39,7 @@
    <link rel="stylesheet" type="text/css" href="{{asset('frontend/css/8fff4db73c200d941da0b256943dd4ba.style-guide-jd.min.css')}}">
    <link rel="stylesheet" type="text/css" href="{{asset('frontend/css/owl.carousel.min.css')}}">
    <link rel="stylesheet" type="text/css" href="{{asset('frontend/css/owl.theme.default.min.css')}}">
+   <link rel="stylesheet" type="text/css" href="{{asset('frontend/css/callbutton.css')}}">
    @yield('css')
    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
    <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -61,6 +62,51 @@
                   @include('layouts.header.index')
                   @yield('content')
                   @include('layouts.footer.index')
+                  <div id="button-contact-vr" class="">
+                     <div id="gom-all-in-one"><!-- v3 -->
+                     <!-- map -->
+                     <div id="map-vr" class="button-contact">
+                     <div class="phone-vr">
+                     <div class="phone-vr-circle-fill"></div>
+                     <div class="phone-vr-img-circle">
+                     <a target="_blank" href="https://maps.app.goo.gl/DJaGbq3LcT2brYLx7">				
+                     <img alt="google map" src="{{url('frontend/img/showroom4.png')}}">
+                     </a>
+                     </div>
+                     </div>
+                     </div>
+                     <!-- end map -->
+                     <!-- zalo -->
+                     <div id="zalo-vr" class="button-contact">
+                     <div class="phone-vr">
+                     <div class="phone-vr-circle-fill"></div>
+                     <div class="phone-vr-img-circle">
+                     <a target="_blank" href="https://zalo.me/{{$setting->phone1}}">				
+                     <img alt="Zalo" src="{{url('frontend/img/zalo.png')}}">
+                     </a>
+                     </div>
+                     </div>
+                     </div>
+                     <!-- end zalo -->
+                     <!-- Phone -->
+                     <div id="phone-vr" class="button-contact">
+                     <div class="phone-vr">
+                     <div class="phone-vr-circle-fill"></div>
+                     <div class="phone-vr-img-circle">
+                     <a href="tel:{{$setting->phone1}}">				
+                     <img alt="Phone" src="{{url('frontend/img/phone.png')}}">
+                     </a>
+                     </div>
+                     </div>
+                     </div>
+                     <div class="phone-bar phone-bar-n">
+                     <a href="tel:{{$setting->phone1}}">
+                     <span class="text-phone">{{$setting->phone1}}</span>
+                     </a>
+                     </div>
+                     <!-- end phone -->
+                     </div><!-- end v3 class gom-all-in-one -->
+                     </div>
                </div>
                <div class="modal-contact">
                   <div class="modal-contact-content">
@@ -263,5 +309,6 @@
                   jQuery('.errorCallingSetMethod').hide();
                </script>
             </div>
+         
 </body>
 </html>
