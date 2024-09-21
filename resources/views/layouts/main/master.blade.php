@@ -108,7 +108,7 @@
                      </div><!-- end v3 class gom-all-in-one -->
                      </div>
                </div>
-               <div class="modal-contact">
+               {{-- <div class="modal-contact">
                   <div class="modal-contact-content">
                      <div class="section right_contact">
                         <h4 class="text-center">
@@ -150,7 +150,7 @@
                         </div>
                         </div>
                   </div>
-               </div>
+               </div> --}}
                <script src="{{asset('frontend/js/classic.release.js')}}"></script>
                <script src="{{asset('frontend/js/api.js')}}"></script>
                <script src="{{asset('frontend/js/3f33548c9952064759fb272d49ee7cd6.style-guide.min.js')}}"></script>
