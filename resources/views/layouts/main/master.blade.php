@@ -158,10 +158,11 @@
                <script src="{{asset('frontend/js/5345593c953b268a34c5fe579d368717.app.min.js')}}"></script>
                <script src="{{asset('frontend/js/owl.carousel.min.js')}}"></script>
                <script src="{{asset('frontend/js/notify.min.js')}}"></script>
+               <div id="fb-root"></div>
+               <script async defer crossorigin="anonymous" src="https://connect.facebook.net/vi_VN/sdk.js#xfbml=1&version=v15.0" nonce="wOiI540C"></script>
                @yield('js')
               
               
-
                <script>
                   $('.product-combo-slide').owlCarousel({
                      loop: true,
@@ -214,6 +215,13 @@
                         }
                      }
                   })
+               </script>
+               <script type="text/javascript">
+                  $(document).foundation();
+                  FL.global.init();
+               </script>
+               <script>
+                  jQuery('.errorCallingSetMethod').hide();
                </script>
             </div>
          
