@@ -120,13 +120,7 @@
          </div>
          <hr class="separator footer-separator">
          <div class="row footer-copy-info flex-dir-column-reverse  medium-flex-dir-row mb-medium-4 mb-5">
-         <div class="columns copy small-12 medium-6">
-            <div class="row text-center medium-text-justify pt-2  pt-medium-0">
-               <div class="columns small-12 ">
-                     <p class="mb-1">Copyright &copy; 2022&nbsp; Becks Jacob</p>
-               </div>
-            </div>
-         </div>
+ 
          <div class="columns social">
             <ul class="menu align-center footer-social-icons">
                <li><a aria-label="tik tok" href="https://www.tiktok.com/"><span class="icon icon-tiktok">&nbsp;</span> </a></li>
@@ -151,7 +145,6 @@
                background-color: #000 !important;
                }
             </style>
-            <style type="text/css">.grecaptcha-badge { display: none !important;}</style>
          </div>
          </div>
    </div>
