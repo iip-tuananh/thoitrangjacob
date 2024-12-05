@@ -43,6 +43,8 @@ class SettingController extends Controller
 			$setting->statusPopup  = $request->statusPopup;
 			$setting->linkpopup  = $request->linkpopup;
 			$setting->footer_content  = $request->footer_content;
+			$setting->banner1  = $request->banner1;
+			$setting->banner2  = $request->banner2;
 	    	$setting->save();
         }else {
 
@@ -67,6 +69,8 @@ class SettingController extends Controller
 			$setting->linkpopup  = $request->linkpopup;
 			$setting->statusPopup  = $request->statusPopup;
 			$setting->footer_content  = $request->footer_content;
+			$setting->banner1  = $request->banner1;
+			$setting->banner2  = $request->banner2;
 	    	$setting->save();
         }
         return response()->json([

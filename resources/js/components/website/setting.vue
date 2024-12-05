@@ -135,7 +135,7 @@
                   <image-upload type="avatar" v-model="objData.popupimage" :title="'popupimage'"></image-upload>
                 </div>
                 <div class="form-group">
-                  <label>Link Popup</label>
+                  <label>Banner trang chủ 1</label>
                   <vs-input
                     type="text"
                     size="default"
@@ -144,12 +144,13 @@
                   />
                 </div>
                 <div class="form-group">
-                  <label>Trạng thái hiển thị popup</label>
-                  <vs-select v-model="objData.statusPopup"
-                  >
-                      <vs-select-item  value="1" text="Hiện" />
-                      <vs-select-item  value="0" text="Ẩn" />
-                    </vs-select>
+                  <label>Banner trang chủ 2</label>
+                  <vs-input
+                    type="text"
+                    size="default"
+                    class="w-100"
+                    v-model="objData.banner1"
+                  />
                 </div>
               <vs-button color="primary" @click="saveSetting">Lưu</vs-button>
             </div>
@@ -190,7 +191,10 @@ export default {
             footer_content:"",
             popupimage:"",
             statusPopup:1,
-            linkpopup:""
+            linkpopup:"",
+            banner1:"",
+            banner2:""
+
         }
     };
   },

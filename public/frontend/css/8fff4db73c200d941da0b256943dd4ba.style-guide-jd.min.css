@@ -92,7 +92,7 @@ cursor: pointer;
 }
 }
 #product-combo, #home-product {
-    margin-top: 50px;
+    margin-top: 20px;
 }
 .item-product-combo {
     display: flex;
@@ -121,6 +121,7 @@ cursor: pointer;
 }
 .item-product .item-info a{
     text-decoration: none;
+    font-weight: 600;
 }
 .item-product{
     padding: 10px;
