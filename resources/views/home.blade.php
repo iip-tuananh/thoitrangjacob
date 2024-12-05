@@ -135,7 +135,11 @@
       @foreach ($categoryhome as $key => $cate)
          <div id="ImageGridPromoImageV2_{{$key}}" class="small-6 medium-4 image-grid-promo-image-v2 promotion-for-tracking" data-creative="{{$cate->avatar}}" data-name="Fleece">
             <a href="{{route('allListProCate', ['cate'=>$cate->slug])}}" aria-label="">
-               <img class="imgecategoru" aria-label="Image Description" alt="" data-interchange="[{{$cate->avatar}}, small], [{{$cate->avatar}}, medium]]" loading="lazy" />
+                  <!-- Mobile Webp image -->
+                  <!-- Desktop Webp Image -->
+                  <img class="imgecategoru" aria-label="Image Description" alt="" data-interchange="[{{$cate->avatar}}, small], [{{$cate->avatar}}, medium]]" loading="lazy" />
+                  <div class="image-grid-promo-image-title-v2">{{languageName($cate->name)}}s</div>
+                  <div class="image-grid-promo-image-cta-v2"><span></span></div>
             </a>
          </div>
       @endforeach
