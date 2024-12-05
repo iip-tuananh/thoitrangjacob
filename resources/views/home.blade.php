@@ -132,18 +132,10 @@
       .image-grid-container-v2 a:hover .image-grid-promo-image-title-v2 {color:#333;}
    </style>
    <div id="ImageGridContainerV2_1" class="row image-grid-container-v2">
-      @foreach ($categoryhome as $cate)
-         <div id="ImageGridPromoImageV2_1" class="small-6 medium-3 image-grid-promo-image-v2 promotion-for-tracking" data-creative="{{$cate->avatar}}" data-name="Fleece">
+      @foreach ($categoryhome as $key => $cate)
+         <div id="ImageGridPromoImageV2_{{$key}}" class="small-6 medium-4 image-grid-promo-image-v2 promotion-for-tracking" data-creative="{{$cate->avatar}}" data-name="Fleece">
             <a href="{{route('allListProCate', ['cate'=>$cate->slug])}}" aria-label="">
-                  <!-- Mobile Webp image -->
-                  <!-- Desktop Webp Image -->
-                  <picture>
-                  <source media="(max-width: 639px)" srcset="{{$cate->avatar}}" type="image/webp">
-                  <source media="(min-width: 640px)" srcset="{{$cate->avatar}}" type="image/webp">
-                  <img aria-label="Image Description" alt="" data-interchange="[{{$cate->avatar}}, small], [{{$cate->avatar}}, medium]]" loading="lazy" />
-                  </picture>
-                  <div class="image-grid-promo-image-title-v2">{{languageName($cate->name)}}s</div>
-                  <div class="image-grid-promo-image-cta-v2"><span></span></div>
+               <img class="imgecategoru" aria-label="Image Description" alt="" data-interchange="[{{$cate->avatar}}, small], [{{$cate->avatar}}, medium]]" loading="lazy" />
             </a>
          </div>
       @endforeach
