@@ -18,70 +18,6 @@
 @endif
 @endsection
 @section('content')
-{{-- <div class="umb-cartridge " id="umb">
-   <div class="row expanded align-center umb-wrapper" data-enableSticky="false" style="background-color:#FFEE00">
-   <div class="small-12">
-      <div class="row align-center">
-         <div class="small-12 medium-10">
-               <div data-noautoplay="false" data-speed="7000" id="umbSlider">
-               <div>
-                  <div id="umb1" class="umb-message-cartridge">
-                     <div class="umb-message-container">
-                           <span style="color:#000000">BOOST YOUR STATUS<br>Stay updated on releases, shipping deals and more<br></span>
-                           <a href="/status?icid=GL_UMB1_STATUSShipping_TXT" class="cta-text" style="color:#000000">Join for Free or Sign In</a>
-                     </div>
-                  </div>
-               </div>
-               <div>
-                  <div id="umb2" class="umb-message-cartridge">
-                     <div class="umb-message-container">
-                           <span style="color:#000000"><strong>Cash App is Here</strong><br>Pay with Cash App for 10% off your first order<br><a href="/all-products?icid=GL_UMB2_CashApp_TXT" target="_self"><span style="color:#000000;"><u>Shop Now</a></u></span>
-                           <a href=" /couponexclusions?icid=GL_UMB2_CashAppDetails_TXT" class="cta-text" style="color:#000000">Details</a>
-                     </div>
-                  </div>
-               </div>
-               <div>
-                  <div id="umb3" class="umb-message-cartridge">
-                     <div class="umb-message-container">
-                           <span style="color:#000000">Buy Now, Pay Later.<br>Interest Free.<br><a href="/klarna?icid=GL_UMB3_Klarna_TXT" target="_self"><span style="color:#000000;"><u>Klarna</a></u></span>
-                           <a href="/afterpay?icid=GL_UMB3_Afterpay_TXT" class="cta-text" style="color:#000000">Afterpay</a>
-                     </div>
-                  </div>
-               </div>
-               </div>
-         </div>
-      </div>
-   </div>
-   </div>
-</div>
-<div id="globalpromo"></div>
-<input type="hidden" id="klarnaExpressFlagStatus" value="true"/>
-<div id="globalErrorMessage"></div>
-<input type="hidden" class="totalSessionTime" value=""/>
-<input type="hidden" class="lastAccessedTime" value=""/>
-<div id="cartSlideShell" class="hide">
-   <div class="row collapse mt-2 align-middle">
-   <div class="column small-3 pl-1">
-      <a href="javascript:void(0)" class="slide-nav-link" data-close>
-      <span class="icon icon-chevron-left"></span>
-      <span class="nav-link-text">Back</span>
-      </a>
-   </div>
-   <div class="column small-6 p-0">
-      <div class="text-center cart-header m-0 h1">Your basket</div>
-   </div>
-   <div class="column small-3 pr-2"></div>
-   </div>
-   <div class="row align-center" style="position: fixed;width: 100%;top: 20%;">
-   <div class="column text-center mt-5">
-      <img src="" width="100px" height="100px"/>
-      <p class="text-dark-gray mt-3">Loading...</p>
-   </div>
-   </div>
-</div> --}}
-{{-- <div class="reveal custom-medium modal-afterpay-block" id="modalAfterpay_Pdp" data-reveal></div>
-<div class="reveal custom-medium modal-afterpay-block" id="modalKlarnaAfterpay_Pdp" data-reveal></div>
-<div class="reveal custom-medium modal-afterpay-block" id="modalKlarna_Pdp" data-reveal></div> --}}
 <div id="skippedNavigation">
    <span id="Ntt_param" class="hide"></span>
    <!-- xmpath {ecr:resourcePath=/content/Web/Test Home/Home - 9.16, ecr:innerPath=null} -->
@@ -153,19 +89,7 @@
    }
    </style>
    <div id="onePageContent" class="one-column-page">
-   <div style="height:5px" class="show-for-large"></div>
-   <div style="height:5px" class="show-for-medium-only"></div>
-   <div style="height:5px" class="show-for-small-only"></div>
-   <div class="row column">
-      <div id="ResponsivePromoBanner-3images_1" class="promotion-for-tracking" data-creative="{{$bannerAds[0]->image}}" data-name="">
-         <a href="{{$bannerAds[0]->name}}" class="promo-banner">
-         <img loading="lazy" alt="" aria-label="" data-interchange="[{{$bannerAds[0]->image}}, small], [{{$bannerAds[0]->image}}, medium], [{{$bannerAds[0]->image}}, large]" alt="">
-         </a>
-      </div>
-   </div>
-   <div style="height:5px" class="show-for-large"></div>
-   <div style="height:5px" class="show-for-medium-only"></div>
-   <div style="height:5px" class="show-for-small-only"></div>
+   
    <div class="row column responsive-promo-carousel ">
       <div id="home_heroslider">
          <div class="carousel carousel-1">
