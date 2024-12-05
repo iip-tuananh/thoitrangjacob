@@ -163,6 +163,7 @@
    <div style="height:30px" class="show-for-large"></div>
    <div style="height:30px" class="show-for-medium-only"></div>
    <div style="height:30px" class="show-for-small-only"></div>
+   <h3 class="text-center text-uppercase">Thương hiệu nổi bật</h3>
    <div id="home_brandbar">
       <div class="row">
          <div class="brand-bar-carousel">
@@ -177,15 +178,6 @@
             @endforeach
          </div>
       </div>
-      <div class="row column text-center mb-4 pt-2 show-for-small-only">
-         <a href="{{route('allProductBrand')}}" class="button promo">Tất Cả Thương Hiệu<span></span></a>
-      </div>
-      <div class="row column text-center mb-4 pt-2 show-for-medium-only">
-         <a href="{{route('allProductBrand')}}" class="button promo">Tất Cả Thương Hiệu<span></span></a>
-      </div>
-      <div class="row column text-center mb-4 pt-2 show-for-large">
-         <a href="{{route('allProductBrand')}}" class="button promo">Tất Cả Thương Hiệu<span></span></a>
-      </div>
    </div>
    <div style="height:40px" class="show-for-large"></div>
    <div style="height:20px" class="show-for-medium-only"></div>
@@ -199,40 +191,6 @@
          </div>
       </div>
    @endif
-   <div style="height:10px" class="show-for-large"></div>
-   <div style="height:5px" class="show-for-medium-only"></div>
-   <div style="height:5px" class="show-for-small-only"></div>
-   <div style="height:10px" class="show-for-large"></div>
-   <div style="height:5px" class="show-for-medium-only"></div>
-   <div style="height:5px" class="show-for-small-only"></div>
-   <div id="product-combo">
-      <div class="row">
-         <div class="column small-12">
-               <h3 class="text-center text-uppercase">Combo sản phẩm</h3>
-         </div>
-      </div>
-      <div class="row" style="position: relative;">
-         <div class="product-combo-slide owl-carousel owl-theme">
-            @foreach ($comboProduct as $combo)
-            <div class="item">
-               <div class="item-image">
-                  <a href="javascript:void(0);" class="quick-view" data-id="{{$combo->id}}" data-url="{{route('listComboPro')}}">
-                     <img src="{{$combo->image}}" alt="{{$combo->name}}" loading="lazy">
-                  </a>
-               </div>
-               <div class="item-info text-center">
-                  <a href="javascript:void(0);" class="quick-view" data-id="{{$combo->id}}" data-url="{{route('listComboPro')}}">Xem chi tiết</a>
-               </div>
-            </div>
-            @endforeach
-         </div>
-         <div class="modal-combo">
-            <span class="close-combo">&times;</span>
-            <div class="modal-combo-content">
-            </div>
-         </div>
-      </div>
-   </div>
    <div id="home-product">
       <div class="row">
          <div class="column small-12">
@@ -293,7 +251,7 @@
    <div style="height:20px" class="show-for-medium-only"></div>
    <div style="height:20px" class="show-for-small-only"></div>
    <style type="text/css">#hpSeoCopy .seo-header {
-      font-family: 'Faustina', serif;
+      font-family: "Montserrat", serif
       font-size: 28px;
       font-weight: 600;
       line-height: 1;
