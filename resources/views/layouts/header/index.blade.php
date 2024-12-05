@@ -122,48 +122,42 @@
                </div>
          </div>
       </li>
-      @foreach ($categoryhome as $cate)
-         <li>
-            <img src="{{$cate->avatar}}" alt="{{languageName($cate->name)}}" class="hide">
-            <a href="{{route('allListProCate', ['cate'=>$cate->slug])}}" class="show-for-small-only text-center" data-toplayer="true"></a>
-            <a href="{{route('allListProCate', ['cate'=>$cate->slug])}}" class="hide-for-small-only text-center" data-toplayer="true">{{languageName($cate->name)}}</a>
-            <input type="text" class="homeCategoryOverride hide" value="{{languageName($cate->name)}}">
-            <input type="text" class="moveHomeLinktoTop hide"  value="false">
-            <div class="menu-dropdown align-middle hide">
-               <div class="row align-top menu-dropdown-row">
-                  @foreach ($cate->typeCate as $typeCate)
-                  @if (count($typeCate->typetwo) > 0)
-                     <div class="medium-2 columns megaMenuLinkContainer">
-                        <ul class="menu vertical">
-                           <li>
-                                 <img src="" alt="{{languageName($typeCate->name)}}" class="hide">
-                                 <a href="{{route('allListProType', ['cate'=>$typeCate->cate_slug, 'type'=>$typeCate->slug])}}"><strong>{{languageName($typeCate->name)}}</strong></a>
-                           </li>
-                           @foreach ($typeCate->typetwo as $type)
-                           <li><a href="{{route('allListTypeTwo', ['cate'=>$type->cate_slug, 'typecate'=>$type->type_slug, 'typetwo'=>$type->slug])}}" title="{{languageName($type->name)}}">{{languageName($type->name)}}</a></li>
-                           @endforeach
-                        </ul>
-                     </div>
-                  @endif
-                  @endforeach
+      <li>
+         <img src="" alt="" class="hide">
+         <a href="" class="show-for-small-only text-center" data-toplayer="true"></a>
+         <a href="" class="hide-for-small-only text-center" data-toplayer="true">Danh mục sản phẩm</a>
+         <input type="text" class="homeCategoryOverride hide" value="Danh mục sản phẩm">
+         <input type="text" class="moveHomeLinktoTop hide"  value="false">
+         <div class="menu-dropdown align-middle hide">
+            <div class="row align-top menu-dropdown-row">
+               @foreach ($categoryhome as $cate)
                   <div class="medium-2 columns megaMenuLinkContainer">
                      <ul class="menu vertical">
-                        <li class="static-title"><strong class="p-0">Thương hiệu</strong></li>
-                        @foreach ($productBrands as $brand)
-                           @if (count(json_decode($brand->cate_id)) > 0)
-                              @foreach (json_decode($brand->cate_id) as $item)
-                                 @if ($item == $cate->id)
-                                 <li><img src="" alt="{{$brand->name}}" class="hide"><a class="" href="{{route('listProductBrand', ['slug'=>$brand->slug,'cate'=>$cate->slug])}}">{{$brand->name}}</a></li>
-                                 @endif
-                              @endforeach
-                           @endif
+                        <li class="static-title"><strong class="p-0">{{languageName($cate->name)}}</strong></li>
+                        @foreach ($cate->typeCate as $typeCate)
+                        <li><a href="{{route('allListProType', ['cate'=>$typeCate->cate_slug, 'type'=>$typeCate->slug])}}" title="{{languageName($typeCate->name)}}">{{languageName($typeCate->name)}}</a></li>
                         @endforeach
                      </ul>
                   </div>
+               @endforeach
+               <div class="medium-2 columns megaMenuLinkContainer">
+                  <ul class="menu vertical">
+                     <li class="static-title"><strong class="p-0">Thương hiệu</strong></li>
+                     @foreach ($productBrands as $brand)
+                        @if (count(json_decode($brand->cate_id)) > 0)
+                           @foreach (json_decode($brand->cate_id) as $item)
+                              @if ($item == $cate->id)
+                              <li><img src="" alt="{{$brand->name}}" class="hide"><a class="" href="{{route('listProductBrand', ['slug'=>$brand->slug,'cate'=>$cate->slug])}}">{{$brand->name}}</a></li>
+                              @endif
+                           @endforeach
+                        @endif
+                     @endforeach
+                  </ul>
                </div>
             </div>
-         </li>
-      @endforeach
+         </div>
+      </li>
+   
       <li data-mainitem="Thương hiệu">
          <img src="" alt="Thương hiệu" class="hide">
          <a href="{{route('allProductBrand')}}" class="text-center" data-toplayer="true">Thương hiệu</a>
