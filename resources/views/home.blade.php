@@ -246,9 +246,9 @@
          </div>
       </div>
       <div class="row column responsive-promo-banner-3-images max-width-xx-large">
-         <div id="ResponsivePromoBanner-3images_2" class="promotion-for-tracking " data-creative="{{$setting->linkpopup}}" data-name="Responsive Promo Banner">
-            <a href="" class="promo-banner">
-            <img alt="Image Description RPB3I ResponsivePromoBanner-3images_2" aria-label="Image Description RPB3I ResponsivePromoBanner-3images_2" data-interchange="[{{$setting->linkpopup}}, small], [{{$setting->linkpopup}}, medium], [{{$setting->linkpopup}}, large]" data-resize="b7iooh-interchange" id="b7iooh-interchange" src="{{$setting->linkpopup}}" data-t="1f9wrk-t" data-events="resize">
+         <div id="ResponsivePromoBanner-3images_2" class="promotion-for-tracking " data-creative="{{$setting->popupimage}}" data-name="Responsive Promo Banner">
+            <a href="{{$setting->linkpopup}}" class="promo-banner">
+            <img alt="Image Description RPB3I ResponsivePromoBanner-3images_2" aria-label="Image Description RPB3I ResponsivePromoBanner-3images_2" data-interchange="[{{$setting->popupimage}}, small], [{{$setting->popupimage}}, medium], [{{$setting->popupimage}}, large]" data-resize="b7iooh-interchange" id="b7iooh-interchange" src="{{$setting->popupimage}}" data-t="1f9wrk-t" data-events="resize">
             </a>
          </div>
       </div>
@@ -258,7 +258,7 @@
       <div class="row column responsive-promo-banner-3-images max-width-xx-large">
          <div id="ResponsivePromoBanner-3images_3" class="promotion-for-tracking " data-creative="{{$setting->banner1}}" data-name="Responsive Promo Banner" data-dy-embedded-object="true">
            
-            <a href="" class="promo-banner">
+            <a href="{{$setting->banner2}}" class="promo-banner">
             <img alt="Image Description RPB3I ResponsivePromoBanner-3images_3" aria-label="Image Description RPB3I ResponsivePromoBanner-3images_3" data-interchange="[{{$setting->banner1}}, small], [{{$setting->banner1}}, medium], [{{$setting->banner1}}, large]" data-resize="7j4iss-interchange" id="7j4iss-interchange" src="{{$setting->banner1}}" data-t="ojfpgh-t" data-events="resize">
             </a>
          </div>

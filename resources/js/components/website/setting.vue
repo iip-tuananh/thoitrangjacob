@@ -131,11 +131,11 @@
                   <image-upload type="avatar" v-model="objData.logo" :title="'logo'"></image-upload>
                 </div>
                 <div class="form-group">
-                  <label>Ảnh Popup</label>
+                  <label>Banner trang chủ 1</label>
                   <image-upload type="avatar" v-model="objData.popupimage" :title="'popupimage'"></image-upload>
                 </div>
                 <div class="form-group">
-                  <label>Banner trang chủ 1</label>
+                  <label>Link banner trang chủ 1</label>
                   <vs-input
                     type="text"
                     size="default"
@@ -145,11 +145,15 @@
                 </div>
                 <div class="form-group">
                   <label>Banner trang chủ 2</label>
+                  <image-upload type="avatar" v-model="objData.banner1" :title="'popupimage'"></image-upload>
+                </div>
+                <div class="form-group">
+                  <label>Link banner trang chủ 1</label>
                   <vs-input
                     type="text"
                     size="default"
                     class="w-100"
-                    v-model="objData.banner1"
+                    v-model="objData.banner2"
                   />
                 </div>
               <vs-button color="primary" @click="saveSetting">Lưu</vs-button>
