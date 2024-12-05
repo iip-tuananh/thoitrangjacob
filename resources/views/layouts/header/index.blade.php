@@ -133,7 +133,9 @@
                @foreach ($categoryhome as $cate)
                   <div class="medium-2 columns megaMenuLinkContainer">
                      <ul class="menu vertical">
-                        <li class="static-title"><strong class="p-0">{{languageName($cate->name)}}</strong></li>
+                        <li class="static-title"><strong class="p-0">
+                           <a href="{{route('allListProCate', ['cate'=>$cate->slug])}}">{{languageName($cate->name)}}</a>
+                        </strong></li>
                         @foreach ($cate->typeCate as $typeCate)
                         <li><a href="{{route('allListProType', ['cate'=>$typeCate->cate_slug, 'type'=>$typeCate->slug])}}" title="{{languageName($typeCate->name)}}">{{languageName($typeCate->name)}}</a></li>
                         @endforeach
