@@ -138,7 +138,7 @@
                   <!-- Mobile Webp image -->
                   <!-- Desktop Webp Image -->
                   <img class="imgecategoru" aria-label="Image Description" alt="" data-interchange="[{{$cate->avatar}}, small], [{{$cate->avatar}}, medium]]" loading="lazy" />
-                  <div class="image-grid-promo-image-title-v2">{{languageName($cate->name)}}s</div>
+                  <div class="image-grid-promo-image-title-v2">{{languageName($cate->name)}}</div>
                   <div class="image-grid-promo-image-cta-v2"><span></span></div>
             </a>
          </div>
@@ -191,6 +191,23 @@
          </div>
       </div>
    @endif
+   <div style="height:25px" class="show-for-large"></div>
+   <div style="height:25px" class="show-for-medium-only"></div>
+   <div style="height:15px" class="show-for-small-only"></div>
+   <style>
+      .image-grid-container-v2 a:hover .image-grid-promo-image-title-v2 {color:#333;}
+   </style>
+   <div id="ImageGridContainerV2_2" class="row image-grid-container-v2">
+      @foreach ($bannerProHot as $banner)
+      <div id="hp_tile_1" class="small-6 medium-4 image-grid-promo-image-v2 promotion-for-tracking" data-creative="{{$banner->image}}" data-name="">
+         <a href="{{$banner->name}}" aria-label="">
+               <!-- Mobile Webp image -->
+               <!-- Desktop Webp Image -->
+               <img class="imgecategoru" aria-label="Image Description" alt="" data-interchange="[{{$banner->image}}, small], [{{$banner->image}}, medium]]" loading="lazy" />
+         </a>
+      </div>
+      @endforeach
+   </div>
    <div id="home-product">
       <div class="row">
          <div class="column small-12">
@@ -207,24 +224,7 @@
             </div>
       </div>
    </div>
-   <style>
-      .image-grid-container-v2 a:hover .image-grid-promo-image-title-v2 {color:#333;}
-   </style>
-   <div id="ImageGridContainerV2_2" class="row image-grid-container-v2">
-      @foreach ($bannerProHot as $banner)
-      <div id="hp_tile_1" class="small-6 medium-6 image-grid-promo-image-v2 promotion-for-tracking" data-creative="{{$banner->image}}" data-name="">
-         <a href="{{$banner->name}}" aria-label="">
-               <!-- Mobile Webp image -->
-               <!-- Desktop Webp Image -->
-               <picture>
-               <source media="(max-width: 639px)" srcset="{{$banner->image}}" type="image/webp">
-               <source media="(min-width: 640px)" srcset="{{$banner->image}}" type="image/webp">
-               <img aria-label="" alt="" data-interchange="[{{$banner->image}}, small], [{{$banner->image}}, medium]]" loading="lazy" style="width: 100%" />
-               </picture>
-         </a>
-      </div>
-      @endforeach
-   </div>
+   
    <style>
       .image-grid-container-v2 a:hover .image-grid-promo-image-title-v2 {color:#333;}
    </style>
@@ -245,51 +245,6 @@
                   </div>
                @endforeach
             </div>
-      </div>
-   </div>
-   <div style="height:20px" class="show-for-large"></div>
-   <div style="height:20px" class="show-for-medium-only"></div>
-   <div style="height:20px" class="show-for-small-only"></div>
-   <style type="text/css">#hpSeoCopy .seo-header {
-      font-family: "Montserrat", serif
-      font-size: 28px;
-      font-weight: 600;
-      line-height: 1;
-      text-transform: uppercase;
-      letter-spacing: 0px;
-      }
-      #hpSeoCopy ul {
-      list-style: none;
-      margin: 0;
-      }
-      #hpSeoCopy ul a {
-      text-decoration: none;
-      }
-      #hpSeoCopy ul a:hover {
-      text-decoration: underline;
-      color: #333;
-      }
-   </style>
-   <div class="is-responsive" id="hpSeoCopy">
-      <div class="row column mb-3">
-         <h1 class="seo-header">Về chúng tôi</h1>
-      </div>
-      <div class="row mb-4">
-         <div class="column small-12 medium-7 pr-large-5">
-               {!!$aboutUs->description!!}
-               <div style="margin-top: 40px;">
-                  <a href="{{route('aboutUs')}}" class="btn-aboutUs">Xem chi tiết</a>
-               </div>
-         </div>
-         <div class="column small-12 medium-5 mt-2 mt-medium-0">
-               <div class="row ml-large-5">
-                  <div class="aboutUs-slide owl-carousel owl-theme">
-                     @foreach ($prizes as $item)
-                        <img src="{{$item->image}}" alt="{{$item->name}}" loading="lazy">
-                     @endforeach
-                  </div>
-               </div>
-         </div>
       </div>
    </div>
    </div>
