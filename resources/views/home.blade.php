@@ -124,41 +124,10 @@
          </div>
       </div>
    </div>
-   <div style="height:35px" class="show-for-large"></div>
-   <div style="height:25px" class="show-for-medium-only"></div>
-   <div style="height:10px" class="show-for-small-only"></div>
-   <style>
-      .jd-image-grid-container-v2 a {text-decoration:none;}
-      .jd-image-grid-container-v2 a:hover .jd-image-grid-promo-image-title-v2 {color:#333;}
-   </style>
-   <div id="JDImageGridContainerV2_1" class="row jd-image-grid-container-v2">
-      @foreach ($typeProHome as $type)
-         <div id="JDImageGridPromoImageV2_1" class=" jd-image-grid-promo-image-v2 show-for-medium medium-4 promotion-for-tracking" data-creative="{{$type->avatar}}" data-name="Desktop 1 Midspot">
-            <a href="{{route('allListProType',['cate'=>$type->cate_slug, 'type'=>$type->slug])}}" aria-label="Shop Now">
-                  <img alt="" data-interchange="[, small], [{{$type->avatar}}, medium]]" loading="lazy" />
-                  <div class="bg">
-                  <div class="jd-image-grid-promo-image-title-v2">{{languageName($type->name)}}</div>
-                  <div class="jd-image-grid-promo-image-cta-v2">Shop Now</div>
-                  </div>
-            </a>
-         </div>
-      @endforeach
-      @foreach ($typeProHome as $type)
-      <div id="JDImageGridPromoImageV2_7" class="hide-for-medium jd-image-grid-promo-image-v2 small-6 medium- promotion-for-tracking" data-creative="{{$type->avatar}}" data-name="Mobile 1 Midspot">
-         <a href="{{route('allListProType',['cate'=>$type->cate_slug, 'type'=>$type->slug])}}" aria-label="Shop Now">
-               <img alt="" data-interchange="[{{$type->avatar}}, small], [, medium]]" loading="lazy" />
-               <div class="bg">
-               <div class="jd-image-grid-promo-image-title-v2">{{languageName($type->name)}}</div>
-               <div class="jd-image-grid-promo-image-cta-v2">Shop Now</div>
-               </div>
-         </a>
-      </div>
-      @endforeach
-   </div>
    <div style="height:25px" class="show-for-large"></div>
    <div style="height:25px" class="show-for-medium-only"></div>
    <div style="height:15px" class="show-for-small-only"></div>
-   <h3 class="text-center text-uppercase">Đối tượng sản phẩm</h3>
+   <h3 class="text-center text-uppercase">Danh mục sản phẩm</h3>
    <style>
       .image-grid-container-v2 a:hover .image-grid-promo-image-title-v2 {color:#333;}
    </style>
@@ -173,7 +142,7 @@
                   <source media="(min-width: 640px)" srcset="{{$cate->avatar}}" type="image/webp">
                   <img aria-label="Image Description" alt="" data-interchange="[{{$cate->avatar}}, small], [{{$cate->avatar}}, medium]]" loading="lazy" />
                   </picture>
-                  <div class="image-grid-promo-image-title-v2">{{languageName($cate->name)}}</div>
+                  <div class="image-grid-promo-image-title-v2">{{languageName($cate->name)}}s</div>
                   <div class="image-grid-promo-image-cta-v2"><span></span></div>
             </a>
          </div>
