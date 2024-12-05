@@ -26,7 +26,7 @@
          </div> --}}
          <div class="header-flex-item hide-on-fixed">
                <a href="{{route('home')}}" aria-label="{{$setting->company}}">
-               <img src="{{$setting->logo}}" srcset="{{$setting->logo}}" alt="{{$setting->company}}" height="44px" width="44px"/>
+               <img style="width: 170px;" src="{{$setting->logo}}" srcset="{{$setting->logo}}" alt="{{$setting->company}}"/>
                </a>
          </div>
          <div class="header-flex-item show-on-fixed search-flex-group">
