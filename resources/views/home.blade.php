@@ -108,13 +108,10 @@
                   </style>
                   <div >
                      <div id="home_hs1" class="promotion-for-tracking" >
-                        <div class="hero-promotion valign-center halign-center bg-valign-center bg-halign-center small-valign-center small-halign-center small-bg-valign-center small-bg-halign-center" style="background-image: url({{$banner->image}});" onclick="window.location='{{$banner->link}}'">
+                        <div class="hero-promotion valign-center halign-center bg-valign-center bg-halign-center small-valign-center small-halign-center small-bg-valign-center small-bg-halign-center" onclick="window.location='{{$banner->link}}'">
                            <a href="{{$banner->link}}">
+                              <img src="{{$banner->image}}" alt="{{$banner->image}}">
                            </a>
-                           <div class="promo-text-container">
-                              <div class="promo-text textpos-full text-width-100 small-textpos-full small-text-width-100">
-                              </div>
-                           </div>
                         </div>
                      </div>
                   </div>

@@ -76,12 +76,22 @@
                      </div>
                      </div>
                      <!-- end map -->
+                     <div id="zalo-vr-1" class="button-contact">
+                        <div class="phone-vr">
+                        <div class="phone-vr-circle-fill"></div>
+                        <div class="phone-vr-img-circle">
+                        <a target="_blank" href="https://zalo.me/{{$setting->phone2}}">				
+                        <img alt="Zalo" src="{{url('frontend/img/zalo.png')}}">
+                        </a>
+                        </div>
+                        </div>
+                        </div>
                      <!-- zalo -->
                      <div id="zalo-vr" class="button-contact">
                      <div class="phone-vr">
                      <div class="phone-vr-circle-fill"></div>
                      <div class="phone-vr-img-circle">
-                     <a target="_blank" href="https://zalo.me/{{$setting->phone1}}">				
+                     <a target="_blank" href="https://zalo.me/{{$setting->phone3}}">				
                      <img alt="Zalo" src="{{url('frontend/img/zalo.png')}}">
                      </a>
                      </div>
