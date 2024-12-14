@@ -110,7 +110,7 @@
                      <div id="home_hs1" class="promotion-for-tracking" >
                         <div class="hero-promotion valign-center halign-center bg-valign-center bg-halign-center small-valign-center small-halign-center small-bg-valign-center small-bg-halign-center" onclick="window.location='{{$banner->link}}'">
                            <a href="{{$banner->link}}">
-                              <img src="{{$banner->image}}" alt="{{$banner->image}}">
+                              <img style="width: 100%;" src="{{$banner->image}}" alt="{{$banner->image}}">
                            </a>
                         </div>
                      </div>
