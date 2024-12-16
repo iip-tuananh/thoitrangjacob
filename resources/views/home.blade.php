@@ -159,15 +159,27 @@
       <div style="height:40px" class="show-for-large"></div>
       <div style="height:20px" class="show-for-medium-only"></div>
       <div style="height:0px" class="show-for-small-only"></div>
-      @if ($bannerAds[1])
-      <div class="row column">
-         <div id="ResponsivePromoBanner-3images_2" class="promotion-for-tracking" data-creative="{{$bannerAds[1]->image}}" data-name="">
-            <a href="{{$bannerAds[1]->name}}" class="promo-banner">
-            <img loading="lazy" alt="" aria-label="" data-interchange="[{{$bannerAds[1]->image}}, small], [{{$bannerAds[1]->image}}, medium], [{{$bannerAds[1]->image}}, large]" alt="">
+      
+      <div class="row column responsive-promo-banner-3-images max-width-xx-large">
+         <div id="ResponsivePromoBanner-3images_2" class="promotion-for-tracking " data-creative="{{$setting->popupimage}}" data-name="Responsive Promo Banner">
+            <a href="{{$setting->linkpopup}}" class="promo-banner">
+            <img alt="Image Description RPB3I ResponsivePromoBanner-3images_2" aria-label="Image Description RPB3I ResponsivePromoBanner-3images_2" data-interchange="[{{$setting->popupimage}}, small], [{{$setting->popupimage}}, medium], [{{$setting->popupimage}}, large]" data-resize="b7iooh-interchange" id="b7iooh-interchange" src="{{$setting->popupimage}}" data-t="1f9wrk-t" data-events="resize">
             </a>
          </div>
       </div>
-      @endif
+      <div style="height:10px" class="show-for-large"></div>
+      <div style="height:10px" class="show-for-medium-only"></div>
+      <div style="height:10px" class="show-for-small-only"></div>
+      <div class="row column responsive-promo-banner-3-images max-width-xx-large">
+         <div id="ResponsivePromoBanner-3images_3" class="promotion-for-tracking " data-creative="{{$setting->banner1}}" data-name="Responsive Promo Banner" data-dy-embedded-object="true">
+           
+            <a href="{{$setting->banner2}}" class="promo-banner">
+            <img alt="Image Description RPB3I ResponsivePromoBanner-3images_3" aria-label="Image Description RPB3I ResponsivePromoBanner-3images_3" data-interchange="[{{$setting->banner1}}, small], [{{$setting->banner1}}, medium], [{{$setting->banner1}}, large]" data-resize="7j4iss-interchange" id="7j4iss-interchange" src="{{$setting->banner1}}" data-t="ojfpgh-t" data-events="resize">
+            </a>
+         </div>
+      </div>
+
+
       <div style="height:25px" class="show-for-large"></div>
       <div style="height:25px" class="show-for-medium-only"></div>
       <div style="height:15px" class="show-for-small-only"></div>
@@ -223,24 +235,17 @@
             </div>
          </div>
       </div>
-      <div class="row column responsive-promo-banner-3-images max-width-xx-large">
-         <div id="ResponsivePromoBanner-3images_2" class="promotion-for-tracking " data-creative="{{$setting->popupimage}}" data-name="Responsive Promo Banner">
-            <a href="{{$setting->linkpopup}}" class="promo-banner">
-            <img alt="Image Description RPB3I ResponsivePromoBanner-3images_2" aria-label="Image Description RPB3I ResponsivePromoBanner-3images_2" data-interchange="[{{$setting->popupimage}}, small], [{{$setting->popupimage}}, medium], [{{$setting->popupimage}}, large]" data-resize="b7iooh-interchange" id="b7iooh-interchange" src="{{$setting->popupimage}}" data-t="1f9wrk-t" data-events="resize">
+      @if ($bannerAds[1])
+      <div class="row column">
+         <div id="ResponsivePromoBanner-3images_2" class="promotion-for-tracking" data-creative="{{$bannerAds[1]->image}}" data-name="">
+            <a href="{{$bannerAds[1]->name}}" class="promo-banner">
+            <img loading="lazy" alt="" aria-label="" data-interchange="[{{$bannerAds[1]->image}}, small], [{{$bannerAds[1]->image}}, medium], [{{$bannerAds[1]->image}}, large]" alt="">
             </a>
          </div>
       </div>
-      <div style="height:10px" class="show-for-large"></div>
-      <div style="height:10px" class="show-for-medium-only"></div>
-      <div style="height:10px" class="show-for-small-only"></div>
-      <div class="row column responsive-promo-banner-3-images max-width-xx-large">
-         <div id="ResponsivePromoBanner-3images_3" class="promotion-for-tracking " data-creative="{{$setting->banner1}}" data-name="Responsive Promo Banner" data-dy-embedded-object="true">
-           
-            <a href="{{$setting->banner2}}" class="promo-banner">
-            <img alt="Image Description RPB3I ResponsivePromoBanner-3images_3" aria-label="Image Description RPB3I ResponsivePromoBanner-3images_3" data-interchange="[{{$setting->banner1}}, small], [{{$setting->banner1}}, medium], [{{$setting->banner1}}, large]" data-resize="7j4iss-interchange" id="7j4iss-interchange" src="{{$setting->banner1}}" data-t="ojfpgh-t" data-events="resize">
-            </a>
-         </div>
-      </div>
+      @endif
+
+      
       <div style="height:30px" class="show-for-large"></div>
       <div style="height:30px" class="show-for-medium-only"></div>
       <div style="height:15px" class="show-for-small-only"></div>

@@ -97,7 +97,7 @@
    <!-- cacheMegaMenu -->
    <div class="row align-middle">
    <ul id="desktop-mainmenu" class="menu main-menu medium-12">
-      <li>
+      {{-- <li>
          <img src="" alt="Bộ sưu tập" class="hide">
          <a href="{{route('allProduct')}}" class="text-center" data-toplayer="true">Bộ sưu tập</a>
          <input type="text" class="homeCategoryOverride hide" value="Bộ sưu tập">
@@ -116,6 +116,31 @@
                            </div>
                            </div>
                      </div>
+                     @endforeach
+                  </div>
+               </div>
+               </div>
+         </div>
+      </li> --}}
+      <li data-mainitem="Chính sách hỗ trợ đại lý">
+         <img src="" alt="Chính sách hỗ trợ đại lý" class="hide">
+         <a href="#" class="text-center" data-toplayer="true">Chính sách hỗ trợ đại lý</a>
+         <input type="text" class="homeCategoryOverride hide" value="">
+         <input type="text" class="moveHomeLinktoTop hide"  value="false">
+         <div class="menu-dropdown align-middle hide">
+               <div class="row align-top menu-dropdown-row">
+               <div class="columns">
+                  <div class="navigation-promo-container" id="NavigationPromoContainer_2">
+                     @foreach ($helpCustomer as $item)
+                        <div>
+                              <div class="navigation-promo-slide" id="sale_nav1">
+                              <div  aria-label="{{$item->title}}" class="navigation-promo-image" style="background-image: url({{$item->image}});" onclick="window.location='{{route('helpCus', ['slug'=>$item->slug])}}'"></div>
+                              <div class="navigation-promo-cta">
+                                 <img src="{{$item->image}}" alt="{{$item->title}}" class="hide">
+                                 <a href="{{route('helpCus', ['slug'=>$item->slug])}}">{{$item->title}}</a>
+                              </div>
+                              </div>
+                        </div>
                      @endforeach
                   </div>
                </div>
@@ -188,31 +213,7 @@
          <input type="text" class="homeCategoryOverride hide" value="">
          <input type="text" class="moveHomeLinktoTop hide"  value="false">
       </li>
-      <li data-mainitem="Chính sách hỗ trợ đại lý">
-         <img src="" alt="Chính sách hỗ trợ đại lý" class="hide">
-         <a href="#" class="text-center" data-toplayer="true">Chính sách hỗ trợ đại lý</a>
-         <input type="text" class="homeCategoryOverride hide" value="">
-         <input type="text" class="moveHomeLinktoTop hide"  value="false">
-         <div class="menu-dropdown align-middle hide">
-               <div class="row align-top menu-dropdown-row">
-               <div class="columns">
-                  <div class="navigation-promo-container" id="NavigationPromoContainer_2">
-                     @foreach ($helpCustomer as $item)
-                        <div>
-                              <div class="navigation-promo-slide" id="sale_nav1">
-                              <div  aria-label="{{$item->title}}" class="navigation-promo-image" style="background-image: url({{$item->image}});" onclick="window.location='{{route('helpCus', ['slug'=>$item->slug])}}'"></div>
-                              <div class="navigation-promo-cta">
-                                 <img src="{{$item->image}}" alt="{{$item->title}}" class="hide">
-                                 <a href="{{route('helpCus', ['slug'=>$item->slug])}}">{{$item->title}}</a>
-                              </div>
-                              </div>
-                        </div>
-                     @endforeach
-                  </div>
-               </div>
-               </div>
-         </div>
-      </li>
+      
       {{-- <li data-mainitem="Releases">
          <img src="" alt="Releases" class="hide">
          <a href="/store/sneaker-release-dates?mnid=release_calendar" class="text-center" data-toplayer="true">Releases</a>
