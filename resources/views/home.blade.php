@@ -89,7 +89,7 @@
       }
    </style>
    <div id="onePageContent" class="one-column-page">
-      <div class="row column responsive-promo-carousel ">
+      <div class="row column responsive-promo-carousel " style="margin-top:10px;">
          <div id="home_heroslider">
             <div class="carousel carousel-1">
                @foreach ($banners as $banner)
@@ -120,26 +120,7 @@
             </div>
          </div>
       </div>
-      <div style="height:25px" class="show-for-large"></div>
-      <div style="height:25px" class="show-for-medium-only"></div>
-      <div style="height:15px" class="show-for-small-only"></div>
-      <h3 class="text-center text-uppercase">Danh mục sản phẩm</h3>
-      <style>
-         .image-grid-container-v2 a:hover .image-grid-promo-image-title-v2 {color:#333;}
-      </style>
-      <div id="ImageGridContainerV2_1" class="row image-grid-container-v2">
-         @foreach ($categoryhome as $key => $cate)
-         <div id="ImageGridPromoImageV2_{{$key}}" class="small-6 medium-4 image-grid-promo-image-v2 promotion-for-tracking" data-creative="{{$cate->avatar}}" data-name="Fleece">
-            <a href="{{route('allListProCate', ['cate'=>$cate->slug])}}" aria-label="">
-               <!-- Mobile Webp image -->
-               <!-- Desktop Webp Image -->
-               <img class="imgecategoru" aria-label="Image Description" alt="" data-interchange="[{{$cate->avatar}}, small], [{{$cate->avatar}}, medium]]" loading="lazy" />
-               <div class="image-grid-promo-image-title-v2">{{languageName($cate->name)}}</div>
-               <div class="image-grid-promo-image-cta-v2"><span></span></div>
-            </a>
-         </div>
-         @endforeach
-      </div>
+      
       <div style="height:10px" class="show-for-large"></div>
       <div style="height:5px" class="show-for-medium-only"></div>
       <div style="height:5px" class="show-for-small-only"></div>
@@ -258,6 +239,35 @@
             <a href="{{$setting->banner2}}" class="promo-banner">
             <img alt="Image Description RPB3I ResponsivePromoBanner-3images_3" aria-label="Image Description RPB3I ResponsivePromoBanner-3images_3" data-interchange="[{{$setting->banner1}}, small], [{{$setting->banner1}}, medium], [{{$setting->banner1}}, large]" data-resize="7j4iss-interchange" id="7j4iss-interchange" src="{{$setting->banner1}}" data-t="ojfpgh-t" data-events="resize">
             </a>
+         </div>
+      </div>
+      <div style="height:30px" class="show-for-large"></div>
+      <div style="height:30px" class="show-for-medium-only"></div>
+      <div style="height:15px" class="show-for-small-only"></div>
+      <div id="home-product">
+         <div class="row">
+            <div class="column small-12">
+               <h3 class="text-center text-uppercase">Danh mục sản phẩm</h3>
+            </div>
+         </div>
+         <div class="row">
+            <div class="product-special-slide owl-carousel owl-theme">
+               @foreach ($categoryhome as $key => $cate)
+               <div class="item" style="padding: 15px;">
+                  <div class="item-product">
+                     <div class="item-image">
+                        <a href="{{route('allListProCate', ['cate'=>$cate->slug])}}">
+                           <img src="{{$cate->avatar}}" alt="{{languageName($cate->name)}}" loading="lazy">
+                        </a>
+                     </div>
+                     <div class="item-info">
+                        <a href="{{route('allListProCate', ['cate'=>$cate->slug])}}">{{languageName($cate->name)}}</a>
+                        
+                     </div>
+                  </div>
+               </div>
+               @endforeach
+            </div>
          </div>
       </div>
    </div>
