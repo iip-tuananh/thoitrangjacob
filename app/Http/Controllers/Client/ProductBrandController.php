@@ -21,7 +21,7 @@ class ProductBrandController extends Controller
             ->select('id','category','name','discount','price','images','slug','cate_slug','type_slug', 'size')
             ->paginate(12);
         }
-        $data['brands'] = ProductBrands::where('status', 1)->get();
+        $data['brands'] = ProductBrands::where('status', 1)->orderBy('order_id','ASC')->get();
         $brand = ProductBrands::where('slug', $slug)->first();
         $data['title'] = $brand->name;
         return view('product.list',$data);
@@ -29,7 +29,7 @@ class ProductBrandController extends Controller
 
     public function allProductBrand()
     {
-        $data['brands'] = ProductBrands::where('status', 1)->get();
+        $data['brands'] = ProductBrands::where('status', 1)->orderBy('order_id','ASC')->get();
         $data['title'] = 'Tất cả thương hiệu';
         return view('product.list-brand', $data);
     }

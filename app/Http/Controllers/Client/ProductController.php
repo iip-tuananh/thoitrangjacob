@@ -18,7 +18,7 @@ class ProductController extends Controller
 {
     public function allProduct()
     {
-        $data['brands'] = ProductBrands::where('status', 1)->get();
+        $data['brands'] = ProductBrands::where('status', 1)->orderBy('order_id','ASC')->get();
         $data['list'] = Product::where(['status'=>1])->orderBy('id','DESC')->select('id','category','name','discount','price','images','slug','cate_slug','type_slug', 'size')
         ->paginate(12);
         $data['title'] = "Tất cả sản phẩm";

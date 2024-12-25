@@ -24,6 +24,14 @@
                 />
                 </div>
                 <div class="form-group">
+                <label>Thứ tự hiển thị</label>
+                <vs-input
+                    class="w-100"
+                    v-model="objData.order_id"
+                    font-size="40px"
+                />
+                </div>
+                <div class="form-group">
                     <label>Thuộc các danh mục sản phẩm</label>
                     <vs-select
                     placeholder="Danh mục"
@@ -85,6 +93,7 @@ data() {
         image: "",
         cate_id : [],
         status: 1,
+        order_id:0
     },
     lang:[],
     img: "",
@@ -157,6 +166,7 @@ methods: {
                 image: "",
                 cate_id: [],
                 status: "",
+                order_id:0
             }
             }else{
             this.objData = response.data;

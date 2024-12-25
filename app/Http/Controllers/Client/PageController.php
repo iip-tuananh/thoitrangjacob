@@ -126,7 +126,7 @@ class PageController extends Controller
         $data['keyword'] = $request->keyword;
         $data['countproduct'] = count($arr);
         $data['resultPro'] = $arr;
-        $data['brands'] = ProductBrands::where('status', 1)->get();
+        $data['brands'] = ProductBrands::where('status', 1)->orderBy('order_id','ASC')->get();
         return view('search_result',$data);
     }
     public function postcontact(Request $request){

@@ -10,11 +10,13 @@ class ProductBrands extends Model
 
     public function createOrEdit($request)
     {
+        // dd($request->all());
         $id = $request->id;
         if($id){
             $query = ProductBrands::find($id);
             if($query){
                 $query->name = $request->name;
+                $query->order_id = (int)$request->order_id;
                 $query->slug = to_slug($request->name);
                 $query->image = $request->image;
                 $query->cate_id = json_encode($request->cate_id);
@@ -26,6 +28,7 @@ class ProductBrands extends Model
         }else{
             $query = new ProductBrands();
             $query->name = $request->name;
+            $query->order_id = (int)$request->order_id;
             $query->slug = to_slug($request->name);
             $query->image = $request->image;
             $query->cate_id = json_encode($request->cate_id);
@@ -39,9 +42,9 @@ class ProductBrands extends Model
     {
         $key = $request->keyword;
         if($key == ""){
-            $query = ProductBrands::orderBy('id','DESC')->get();
+            $query = ProductBrands::orderBy('order_id','ASC')->get();
         }else{
-            $query = ProductBrands::where('name', 'LIKE', '%'.$key.'%')->orderBy('id','DESC')->get()->toArray();
+            $query = ProductBrands::where('name', 'LIKE', '%'.$key.'%')->orderBy('order_id','ASC')->get()->toArray();
         }
         return $query;
     }

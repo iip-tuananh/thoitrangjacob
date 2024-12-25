@@ -18,12 +18,14 @@
             />
             <vs-table max-items="7" pagination :data="list">
                 <template slot="thead">
+                <vs-th>Thứ Tự Hiển Thị</vs-th>
                 <vs-th>Avatar</vs-th>
                 <vs-th>Tên thương hiệu</vs-th>
                 <vs-th>Hành động</vs-th>
                 </template>
                 <template slot-scope="{data}">
                 <vs-tr :key="indextr" v-for="(tr, indextr) in data">
+                    <vs-td :data="tr.order_id">{{tr.order_id}}</vs-td>
                     <vs-td :data="tr.id">
                     <vs-avatar size="70px" :src="tr.image" />
                     </vs-td>

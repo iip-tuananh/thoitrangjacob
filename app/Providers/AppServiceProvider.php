@@ -60,7 +60,7 @@ class AppServiceProvider extends ServiceProvider
                 $query->setRelation('product', $query->product->toArray());
                 return $query;
             });
-            $productBrands = ProductBrands::where('status', 1)->get();
+            $productBrands = ProductBrands::where('status', 1)->orderBy('order_id','ASC')->get();
             $banners = Banner::where(['status'=>1])->get(['id','image','link','title','description']);
             $cartcontent = session()->get('cart', []);
             $viewold = session()->get('viewoldpro', []);
