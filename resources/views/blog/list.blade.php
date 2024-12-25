@@ -34,7 +34,7 @@
    <div class="container">
       <div class="list-news row">
          @foreach ($blogs as $blog)
-            <div class="medium-4 news-item column">
+            <div class="medium-4 small-12 news-item column">
                <a href="{{route('detailBlog', ['slug'=>$blog->slug])}}" title="{{languageName($blog->title)}}" class="news-item-img">
                <img src="{{$blog->image}}" alt="{{languageName($blog->title)}}" class="lazy img-responsive center-block" loading="lazy" />
                </a>
