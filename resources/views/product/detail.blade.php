@@ -237,8 +237,8 @@ $priceDiscount = $product->price - $product->price * ($product->discount / 100);
             <i class="fa-solid fa-caret-right"></i>
          </li>
          <li>
-            <a itemprop="item" href="{{route('allProduct')}}" title="{{languageName($product->cate->name)}}" style="margin-right: 6px;margin-left: 6px;">
-               <span itemprop="name">{{languageName($product->cate->name)}}</span>
+            <a itemprop="item" href="{{route('allProduct')}}" title="Sản phẩm" style="margin-right: 6px;margin-left: 6px;">
+               <span itemprop="name">Sản phẩm</span>
                <meta itemprop="position" content="2" />
             </a>
             <i class="fa-solid fa-caret-right"></i>
